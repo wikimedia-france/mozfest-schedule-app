@@ -51,9 +51,10 @@
     </div>
     </script>
 
+    <!-- template used in tabs other than the search / all sessions tab view -->
     <script type="text/template" id="session-card-template">
-    <a href="#_session-<%= sessionID %>" id="session-<%= sessionID %>" class="session-list-item<% if (session.category == 'Everyone') { %> session-everyone<% } %>" data-session="<%= sessionID.replace('-ghost','') %>">
-      <h4><%= smartypants(session.title) %></h4>
+    <div id="session-<%= sessionID %>" class="session-list-item<% if (session.category == 'Everyone') { %> session-everyone<% } %>" data-session="<%= sessionID.replace('-ghost','') %>">
+      <h4><a href="#_session-<%= sessionID %>"><%= smartypants(session.title) %></a></h4>
       <div>
         <% if (showFacilitators && session.facilitators) { %>
         <div class="session-facilitators">
@@ -76,12 +77,13 @@
         </div>
         <% } %>
       </div>
-    </a>
+    </div>
     </script>
 
+    <!-- template used in the search / all sessions tab view -->
     <script type="text/template" id="session-list-item-template">
-    <a href="#_session-<%= sessionID %>" id="session-<%= sessionID %>" class="session-list-item" data-session="<%= sessionID.replace('-ghost','') %>">
-      <h4><%= smartypants(session.title) %></h4>
+    <div id="session-<%= sessionID %>" class="session-list-item" data-session="<%= sessionID.replace('-ghost','') %>">
+      <h4><a href="#_session-<%= sessionID %>"><%= smartypants(session.title) %></a></h4>
       <% if (session.start) { %>
       <div class="session-time">
         <% if (session.day) { %><%= session.day %>, <% } %><%= session.start %>
@@ -107,7 +109,7 @@
         <%= marked(session.description.replace('http://','').replace('https://','')) %>
       <% } %>
       </div>
-    </a>
+    </div>
     </script>
 
     <script type="text/template" id="session-detail-template">
@@ -150,6 +152,7 @@
     </div>
     </script>
 
+    <!-- template used in [categories] list view -->
     <script type="text/template" id="categories-list-template">
       <div class="category-list-item" data-category="<%= category.slugify(category.name) %>">
         <div class="category-icon-container">
@@ -165,15 +168,16 @@
       </div>
     </script>
 
+    <!-- template used in [tags] list view -->
     <script type="text/template" id="tags-list-template">
       <% if (name) { %>
-      <a href="#_<%= customTagLabel %>-<%= slugify(name) %>" class="tag-list-item" data-tag="<%= slugify(name) %>">
-        <h4><%= name %></h4>
+      <div class="tag-list-item" data-tag="<%= slugify(name) %>">
+        <h4><a href="#_<%= customTagLabel %>-<%= slugify(name) %>"><%= name %></a></h4>
         <p><%= numSessions %> session<% if (numSessions>1) { %>s<% } %></p>
         <% if (description.length) { %><% description.forEach(function(p) { %>
           <%= marked(p) %>
         <% }) %><% } %>
-      </a>
+      </div>
       <% } %>
     </script>
 
@@ -200,7 +204,7 @@
         tabList: [
           { name: 'Saturday', displayName: 'Sat', tabDate: new Date(2016,5,21) },
           { name: 'Sunday', displayName: 'Sun', tabDate: new Date(2016,5,22) },
-          { name: 'All', displayName: 'All' }
+          { name: 'All', displayName: '<i class="fa fa-search"></i>' }
         ]
       }
       // instantiate the app
