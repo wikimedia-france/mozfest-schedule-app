@@ -7,7 +7,7 @@ themes.json
 css/style.css
 img/logo-square-wikiconvention-2016-32px.png
 img/logo-wikiconvention-2016.svg
-vendor/font-awesome/font-awesome.min.css
+vendor/font-awesome/css/font-awesome.min.css
 vendor/schedule-app-core/css/schedule.css
 vendor/schedule-app-core/js/jquery-2.1.0.min.js
 vendor/schedule-app-core/js/marked.min.js
