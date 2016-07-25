@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Schedule App</title>
-    <meta name="description" content="Schedule for MozFest 2016">
+    <title>WikiConvention Francophone 2016 - Programme</title>
+    <meta name="description" content="Programme de la WikiConvention Francophone 2016">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://mozilla.github.io/schedule-app-core/css/schedule.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon.png">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
     <script>
@@ -28,7 +28,7 @@
       <nav>
         <div class="container">
           <div class="logo">
-            <img src="img/logo-mozilla-festival.svg" />
+            <img src="img/logo-wikiconvention-2016.svg" />
           </div>
           <div id="page-links"></div>
         </div>
@@ -188,23 +188,24 @@
     <script src="https://mozilla.github.io/schedule-app-core/js/schedule.js"></script>
     <script>
       var customConfig = {
-        mainHeaderText: "MozFest 2016",
-        subHeaderText: "*** filled with dummy data ***",
+        mainHeaderText: "WikiConvention Francophone 2016",
+        subHeaderText: "Programme des conférences et ateliers",
         displayNameForCategory: {
-          singular:'theme', // this can only be one word
-          plural: 'themes' // this can only be one word
+          singular:'Thème', // this can only be one word
+          plural: 'Thèmes' // this can only be one word
         },
         displayNameForTag: {
-          singular:'tag', // this can only be one word
-          plural: 'tags' // this can only be one word
+          singular:'Mot clé', // this can only be one word
+          plural: 'Mots clé' // this can only be one word
         },
         pathToSessionsJson: 'sessions.json',
         pathToCategoriesJson: 'themes.json',
         pathToTagsJson: 'tags.json',
         localStoragePrefix: 'iron-chef',
         tabList: [
-          { name: 'Saturday', displayName: 'Sat', tabDate: new Date(2016,5,21) },
-          { name: 'Sunday', displayName: 'Sun', tabDate: new Date(2016,5,22) },
+          { name: 'Vendredi', displayName: 'Ven', tabDate: new Date(2016,8,19) },
+          { name: 'Samedi', displayName: 'Sam', tabDate: new Date(2016,8,20) },
+          { name: 'Dimanche', displayName: 'Dim', tabDate: new Date(2016,8,21) },
           { name: 'All', displayName: '<i class="fa fa-search"></i>' }
         ]
       }

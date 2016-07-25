@@ -1,14 +1,60 @@
 [
   {
-    "name": "Advocacy",
+    "name": "Afrique",
+    "iconSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Africa_stub_icon.svg/20px-Africa_stub_icon.svg.png",
     "description": [
-      "Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy Advocacy"
+      "Session sur l'afrique"
     ]
   },
   {
-    "name": "MLN",
+    "name": "Débats",
+    "iconSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Noun_project_2472.svg/20px-Noun_project_2472.svg.png",
     "description": [
-      "Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks Mozilla Learning Networks "
+      "Session débat"
     ]
+  },
+  {
+    "name": "Édition",
+    "iconSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Edit_Notepad_Icon.svg/20px-Edit_Notepad_Icon.svg.png",
+    "description": [
+      "Session sur la contribution"
+    ]
+  },
+  {
+    "name": "Langues régionales",
+    "iconSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Translation_icon.svg/20px-Translation_icon.svg.png",
+    "description": [
+      "Session sur les langues régionales"
+    ]
+  },
+  {
+    "name": "Mixité et diversité",
+    "iconSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Igualtat_de_sexes.svg/20px-Igualtat_de_sexes.svg.png",
+    "description": [
+      "Session sur la mixité et la diversité"
+    ]
+  },
+  {
+    "name": "GLAM et autres partenaires",
+    "description": [
+      "Session sur le GLAM et les autres partenaires"
+    ],
+    "iconSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Museum_black_icon.svg/20px-Museum_black_icon.svg.png"
+  },
+  {
+    "name": "Projets frère et amis",
+    "description": []
+  },
+  {
+    "name": "Technique",
+    "description": []
+  },
+  {
+    "name": "Rassemblement",
+    "description": []
+  },
+  {
+    "name": "Cérémonies, repas, pauses, ...",
+    "description": []
   }
 ]
