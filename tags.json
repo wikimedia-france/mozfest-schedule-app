@@ -1,18 +1,1 @@
-[
-  {
-    "name": "accueil",
-    "description": []
-  },
-  {
-    "name": "pause",
-    "description": []
-  },
-  {
-    "name": "repas",
-    "description": []
-  },
-  {
-    "name": "cérémonie",
-    "description": []
-  }
-]
+[{"name":"accueil","description":[]},{"name":"pause","description":[]},{"name":"repas","description":[]},{"name":"cérémonie","description":[]}]
