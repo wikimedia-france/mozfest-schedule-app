@@ -1,0 +1,8 @@
+[submodule "schedule-app-core"]
+	path = vendor/schedule-app-core
+	url = https://github.com/mozilla/schedule-app-core.git
+	branch = gh-pages
+[submodule "font-awesome"]
+	path = vendor/font-awesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
+	branch = master
