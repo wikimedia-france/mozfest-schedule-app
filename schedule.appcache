@@ -1,2 +1,16 @@
 CACHE MANIFEST
 # v1 - 2016-07-25
+index.html
+sessions.json
+tags.json
+themes.json
+css/style.css
+img/logo-square-wikiconvention-2016-32px.png
+img/logo-wikiconvention-2016.svg
+vendor/font-awesome/font-awesome.min.css
+vendor/schedule-app-core/css/schedule.css
+vendor/schedule-app-core/js/jquery-2.1.0.min.js
+vendor/schedule-app-core/js/marked.min.js
+vendor/schedule-app-core/js/modernizr.js
+vendor/schedule-app-core/js/schedule.js
+vendor/schedule-app-core/js/underscore-min.js
