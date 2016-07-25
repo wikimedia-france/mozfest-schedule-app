@@ -1,9 +1,18 @@
 [
   {
-    "name": "privacy",
-    "description": [
-      "description description description description description description description description description description description "
-    ],
-    "iconSrc": ""
+    "name": "accueil",
+    "description": []
+  },
+  {
+    "name": "pause",
+    "description": []
+  },
+  {
+    "name": "repas",
+    "description": []
+  },
+  {
+    "name": "cérémonie",
+    "description": []
   }
 ]
