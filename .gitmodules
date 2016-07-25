@@ -1,4 +1,0 @@
-[submodule "schedule-app-core"]
-	path = vendor/schedule-app-core
-	url = https://github.com/mozilla/schedule-app-core.git
-	branch = gh-pages
