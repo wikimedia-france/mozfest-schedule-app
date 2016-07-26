@@ -133,7 +133,7 @@
 
     <script type="text/template" id="session-detail-template">
     <div id="session-detail-wrapper">
-      <a id="show-full-schedule" href="/">Back to full schedule</a>
+      <a id="show-full-schedule" href="/">Retourner sur le programme</a>
       <div id="session-detail-<%= session.id %>" class="session-detail" data-session="<%= session.id %>">
         <div class="header">
           <h2><%= smartypants(session.title) %></h2>
@@ -188,7 +188,7 @@
         </div>
         <h4><%= category.name %></h4>
         <div>
-          <a class="see-all-events-in-this-category" href="#_<%= customCategoryLabel %>-<%= category.slugify(category.name) %>">See all events in this <%= customCategoryLabel %></a>
+          <a class="see-all-events-in-this-category" href="#_<%= customCategoryLabel %>-<%= category.slugify(category.name) %>">Voir tous les événements dans ce <%= customCategoryLabel %></a>
           <% category.description.forEach(function(p) { %>
             <%= marked(p) %>
           <% }) %>
@@ -223,7 +223,7 @@
         },
         displayNameForTag: {
           singular:'Mot clé', // this can only be one word
-          plural: 'Mots clé' // this can only be one word
+          plural: 'Mots clés' // this can only be one word
         },
         pathToSessionsJson: 'sessions.json',
         pathToCategoriesJson: 'themes.json',

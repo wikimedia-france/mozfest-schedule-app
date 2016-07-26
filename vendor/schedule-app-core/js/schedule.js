@@ -120,10 +120,10 @@ function Schedule(CUSTOM_CONFIG) {
       // if there's no session data yet, fetch from JSON
       $.getJSON(schedule.pathToSessionsJson, function() {
           // temporarily show loading text
-          $('.open-block').html('<span class="loading">LOADING SCHEDULE DATA <span>.</span><span>.</span><span>.</span></span>');
+          $('.open-block').html('<span class="loading">CHARGEMENT DES DONNÉES DU PROGRAMME <span>.</span><span>.</span><span>.</span></span>');
         })
         .done(function(results) {
-          $('.open-block').text('OPEN');
+          $('.open-block').text('OUVRIR');
           schedule.formatTimeblocks(results.timeblocks);
           schedule.sortSessionGroups(results.sessions);
           // update savedSessionList with any new data
@@ -225,7 +225,7 @@ function Schedule(CUSTOM_CONFIG) {
       var container = $("<div></div>")
                         .attr("id", timeblock.key)
                         .attr("class", "page-block")
-                        .html("<div class='open-block'>OPEN</div>");
+                        .html("<div class='open-block'>OUVRIR</div>");
       schedule.$container.find(".schedule-tab:visible").append(header)
                                                        .append(container);
     });
@@ -399,7 +399,7 @@ function Schedule(CUSTOM_CONFIG) {
     blocks.prev('h3').addClass('slider-control').append('<i class="fa fa-chevron-circle-down"></i>');
     blocks.addClass('slider');
     schedule.calculateBlockHeights(blocks);
-    schedule.$container.find('.page-caption').append('<a href="#" id="slider-collapse-all" class="page-control" data-action="collapse">Hide all sessions</a>');
+    schedule.$container.find('.page-caption').append('<a href="#" id="slider-collapse-all" class="page-control" data-action="collapse">Cacher toutes les sessions</a>');
   }
 
   // calculate and store block heights for animations
@@ -579,7 +579,7 @@ function Schedule(CUSTOM_CONFIG) {
   schedule.addListControls = function() {
     schedule.addCaptionOverline();
     var generateHelpText = function() {
-      return "Search names, facilitators, " + DISPLAY_NAME_FOR_CATEGORY.plural + ", " + DISPLAY_NAME_FOR_TAG.plural +", and descriptions:";
+      return "Rechercher des noms, auteurs, " + DISPLAY_NAME_FOR_CATEGORY.plural + ", " + DISPLAY_NAME_FOR_TAG.plural +", et descriptions:";
     }
 
     var filterForm = '<div id="filter-form">\
@@ -589,7 +589,7 @@ function Schedule(CUSTOM_CONFIG) {
     $(filterForm).appendTo(schedule.$container);
     $('#list-filter').focus();
 
-    var expand = $('<a id="show-descriptions" class="page-control" data-action="show" href="#"><i class="fa fa-plus-circle"></i> Show descriptions</a>').appendTo(schedule.$container);
+    var expand = $('<a id="show-descriptions" class="page-control" data-action="show" href="#"><i class="fa fa-plus-circle"></i> Afficher les descriptions</a>').appendTo(schedule.$container);
 
     // watch search input for changes, and filter the session list accordingly
     $('#list-filter').change(function() {
@@ -628,7 +628,7 @@ function Schedule(CUSTOM_CONFIG) {
       // show "no results" if search input value matches zero items
       if ($('.session-list-item:visible').length == 0) {
         $('#no-results').remove();
-        $('#filter-form input').after('<p id="no-results">No matching results found.</p>');
+        $('#filter-form input').after('<p id="no-results">Aucun résultat correspondant trouvé.</p>');
       } else {
         $('#no-results').remove();
       }
@@ -641,7 +641,7 @@ function Schedule(CUSTOM_CONFIG) {
   // showFavorites() handles display when someone chooses the "Favorites" tab
   schedule.showFavorites = function() {
     // provide some user instructions at top of page
-    schedule.$container.empty().append('<p class="overline">Tap the hearts to add favorites to your list here.</p>').append(schedule.sessionListTemplate);
+    schedule.$container.empty().append('<p class="overline">Appuyez sur les coeurs pour ajouter des favoris à la liste.</p>').append(schedule.sessionListTemplate);
     // use savedSessionList IDs to render favorited sessions to page
     schedule.addSessionsToSchedule(schedule.savedSessionList);
     schedule.clearOpenBlocks();
@@ -652,7 +652,7 @@ function Schedule(CUSTOM_CONFIG) {
     schedule.savedSessionList = _.filter(schedule.sessionList, function(v, k) {
       // by default include "everyone" sessions on favorites list
       // just to make temporal wayfinding easier
-      return (v.category == 'Everyone') || _.contains(schedule.savedSessionIDs, v.id);
+      return (v.category == 'Tout public') || _.contains(schedule.savedSessionIDs, v.id);
     });
   }
 
@@ -818,10 +818,10 @@ function Schedule(CUSTOM_CONFIG) {
 
       if (action == 'show') {
         $('.session-list-item').find('.session-description').show();
-        clicked.html('<i class="fa fa-minus-circle"></i> Hide descriptions').data('action', 'hide');
+        clicked.html('<i class="fa fa-minus-circle"></i> Cacher les descriptions').data('action', 'hide');
       } else {
         $('.session-list-item').find('.session-description').hide();
-        clicked.html('<i class="fa fa-plus-circle"></i> Show descriptions').data('action', 'show');
+        clicked.html('<i class="fa fa-plus-circle"></i> Afficher les descriptions').data('action', 'show');
       }
     });
 
