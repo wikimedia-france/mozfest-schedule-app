@@ -1,3 +1,20 @@
 .logo img {
     width: 205px;
 }
+
+.session-time em {
+    font-size: small;
+    font-style: normal;
+}
+
+.session-time em:before {
+    content: "(Durée ";
+}
+
+.session-time em:after {
+    content: ")";
+}
+
+.category-list-item .category-icon-container img {
+    height: 75px;
+}
