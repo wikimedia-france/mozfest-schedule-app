@@ -36,12 +36,15 @@ vendor/schedule-app-core/fonts/fontawesome-webfont.svg
 vendor/schedule-app-core/fonts/fontawesome-webfont.ttf
 vendor/schedule-app-core/fonts/fontawesome-webfont.woff
 vendor/schedule-app-core/fonts/fontawesome-webfont.woff2
-vendor/schedule-app-core/img/icon-category.svg
 vendor/schedule-app-core/img/icon-clock.svg
 vendor/schedule-app-core/img/icon-facilitator.svg
 vendor/schedule-app-core/img/icon-heart.svg
 vendor/schedule-app-core/img/icon-heart-filled.svg
+vendor/schedule-app-core/img/icon-location.svg
+vendor/schedule-app-core/img/icon-offline.svg
 vendor/schedule-app-core/img/icon-tag.svg
+vendor/schedule-app-core/img/icon-theme.svg
+vendor/schedule-app-core/img/icon-url.svg
 vendor/schedule-app-core/js/jquery-2.1.0.min.js
 vendor/schedule-app-core/js/marked.min.js
 vendor/schedule-app-core/js/modernizr.js
