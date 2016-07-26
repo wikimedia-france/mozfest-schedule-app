@@ -14,6 +14,7 @@ img/logo-square-wikiconvention-2016-180px.png
 img/logo-square-wikiconvention-2016-32px.png
 img/logo-square-wikiconvention-2016.svg
 img/logo-wikiconvention-2016.svg
+js/script.js
 vendor/font-awesome/css/font-awesome.min.css
 vendor/font-awesome/fonts/FontAwesome.otf
 vendor/font-awesome/fonts/fontawesome-webfont.eot
@@ -36,6 +37,10 @@ vendor/schedule-app-core/fonts/fontawesome-webfont.svg
 vendor/schedule-app-core/fonts/fontawesome-webfont.ttf
 vendor/schedule-app-core/fonts/fontawesome-webfont.woff
 vendor/schedule-app-core/fonts/fontawesome-webfont.woff2
+vendor/schedule-app-core/img/icon-cache-busy.svg
+vendor/schedule-app-core/img/icon-cache-error.svg
+vendor/schedule-app-core/img/icon-cache-ok.svg
+vendor/schedule-app-core/img/icon-cache-warning.svg
 vendor/schedule-app-core/img/icon-clock.svg
 vendor/schedule-app-core/img/icon-facilitator.svg
 vendor/schedule-app-core/img/icon-heart.svg
