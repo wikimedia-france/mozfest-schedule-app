@@ -18,3 +18,18 @@
 .category-list-item .category-icon-container img {
     height: 75px;
 }
+
+.offline-notice {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(85,86,90,0.1);
+    color: #55565a;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.offline-notice img {
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: -7px;
+}
