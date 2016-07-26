@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="vendor/schedule-app-core/css/schedule.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/schedule-blue.css">
+    <link rel="stylesheet" href="css/schedule-green.css">
+    <link rel="stylesheet" href="css/schedule-purple.css">
+    <link rel="stylesheet" href="css/schedule-red.css">
+    <link rel="stylesheet" href="css/schedule-yellow.css">
     <link rel="icon" type="image/png" sizes="32x32" href="img/logo-square-wikiconvention-2016-32px.png">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="img/logo-square-wikiconvention-2016-180px.png">
     <!--<script>
@@ -60,19 +65,24 @@
     <div id="session-<%= sessionID %>" class="session-list-item<% if (session.category == 'Tout public') { %> session-everyone<% } %>" data-session="<%= sessionID.replace('-ghost','') %>">
       <h4><a href="#_session-<%= sessionID %>"><%= smartypants(session.title) %></a></h4>
       <div>
+        <% if (session.start) { %>
+        <div class="session-time">
+          <% if (session.day) { %><%= session.day %>, <% } %><%= session.start %><% if (session.duration) { %> <em><%= session.duration %></em><% } %>
+        </div>
+        <% } %>
+        <% if (session.location) { %>
+        <div class="session-location">
+          <% if (session.location) { %><%= smartypants(session.location) %><% } %>
+        </div>
+        <% } %>
         <% if (showFacilitators && session.facilitators) { %>
         <div class="session-facilitators">
           <%= smartypants(session.facilitators) %>
         </div>
         <% } %>
-        <% if (session.start) { %>
-        <div class="session-time">
-          <% if (session.day) { %><%= session.day %>, <% } %><%= session.start %>
-        </div>
-        <% } %>
-        <% if (session.category || session.location) { %>
-        <div class="session-category-and-location">
-          <% if (session.category) { %><%= session.category %><% } %><% if (session.category&&session.location) { %>, <% } %><% if (session.location) { %><%= smartypants(session.location) %><% } %>
+        <% if (session.category) { %>
+        <div class="session-category">
+          <% if (session.category) { %><%= session.category %><% } %>
         </div>
         <% } %>
         <% if (session.tags) { %>
@@ -90,22 +100,27 @@
       <h4><a href="#_session-<%= sessionID %>"><%= smartypants(session.title) %></a></h4>
       <% if (session.start) { %>
       <div class="session-time">
-        <% if (session.day) { %><%= session.day %>, <% } %><%= session.start %>
+        <% if (session.day) { %><%= session.day %>, <% } %><%= session.start %><% if (session.duration) { %> <em><%= session.duration %></em><% } %>
       </div>
       <% } %>
-      <% if (session.category || session.location) { %>
-      <div class="session-category-and-location">
-        <% if (session.category) { %><%= session.category %><% } %><% if (session.category&&session.location) { %>, <% } %><% if (session.location) { %><%= smartypants(session.location) %><% } %>
-      </div>
-      <% } %>
-       <% if (session.tags) { %>
-      <div class="session-tags">
-        <%= session.tags %>
+      <% if (session.location) { %>
+      <div class="session-location">
+        <% if (session.location) { %><%= smartypants(session.location) %><% } %>
       </div>
       <% } %>
       <% if (showFacilitators && session.facilitators.length > 0) { %>
       <div class="session-facilitators">
         <%= smartypants(session.facilitators) %>
+      </div>
+      <% } %>
+      <% if (session.category) { %>
+      <div class="session-category">
+        <% if (session.category) { %><%= session.category %><% } %>
+      </div>
+      <% } %>
+       <% if (session.tags) { %>
+      <div class="session-tags">
+        <%= session.tags %>
       </div>
       <% } %>
       <div class="hidden session-description">
@@ -126,13 +141,22 @@
         <div class="meta">
           <% if (session.start) { %>
           <div class="session-time">
-            <% if (session.day) { %><%= session.day %>, <% } %><%= session.start %>
+            <% if (session.day) { %><%= session.day %>, <% } %><%= session.start %><% if (session.duration) { %> <em><%= session.duration %></em><% } %>
           </div>
           <% } %>
-          <% if (session.category || session.location) { %>
-          <div class="session-category-and-location">
-            <% if (session.category) { %>
-              <a href="#_<%= customCategoryLabel %>-<%= slugify(session.category) %>"><%= session.category %></a><% } %><% if (session.category&&session.location) { %>, <% } %><% if (session.location) { %><%= smartypants(session.location) %><% } %>
+          <% if (session.location) { %>
+          <div class="session-location">
+            <% if (session.location) { %><%= smartypants(session.location) %><% } %>
+          </div>
+          <% } %>
+          <% if (session.facilitators) { %>
+          <div class="session-facilitators">
+            <% session.facilitator_array.forEach(function(facilitator, index) { %><% if (index > 0) { %>, <br><% } %><%= facilitator.name %><% if (facilitator.twitter) { %> <a href="https://twitter.com/<%= facilitator.twitter %>"><%= facilitator.twitter %></a><% } %><% if (facilitator.description.length>0) { %>, <%= facilitator.description %><% } %><% }) %>
+          </div>
+          <% } %>
+          <% if (session.category) { %>
+          <div class="session-category">
+            <% if (session.category) { %><a href="#_<%= customCategoryLabel %>-<%= slugify(session.category) %>"><%= session.category %></a><% } %>
           </div>
           <% } %>
           <% if (session.tags && session.tagArray.length) { %>
@@ -141,9 +165,9 @@
               <a href="#_<%= customTagLabel %>-<%= slugify(name) %>"><%= name %></a><% }) %>
           </div>
           <% } %>
-          <% if (session.facilitators) { %>
-          <div class="session-facilitators">
-            <% session.facilitator_array.forEach(function(facilitator, index) { %><% if (index > 0) { %>, <br><% } %><%= facilitator.name %><% if (facilitator.twitter) { %> <a href="https://twitter.com/<%= facilitator.twitter %>"><%= facilitator.twitter %></a><% } %><% if (facilitator.description.length>0) { %>, <%= facilitator.description %><% } %><% }) %>
+          <% if (session.link) { %>
+          <div class="session-url">
+            <% if (session.link) { %><a href="<%= session.link %>" target="_blank">Lien D'Information</a><% } %>
           </div>
           <% } %>
         </div>
@@ -211,7 +235,7 @@
           { name: 'Dimanche', displayName: 'Dim', tabDate: new Date(2016,8,21) },
           { name: 'All', displayName: '<i class="fa fa-search"></i>' }
         ]
-      }
+      };
       // instantiate the app
       new Schedule(customConfig);
     </script>

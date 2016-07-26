@@ -1,0 +1,42 @@
+body.theme-blue #page-links a.active {
+    color: #1F93C4;
+}
+
+body.theme-blue h2 {
+    color: #1F93C4;
+}
+
+body.theme-blue .btn {
+    background: #1F93C4;
+}
+
+body.theme-blue .btn:hover {
+    background: #1F93C4;
+}
+
+body.theme-blue #schedule-controls a.active {
+    background-color: #1F93C4;
+}
+
+body.theme-blue .schedule-tab h3 span,
+body.theme-blue .page-caption h3 span {
+    color: #1F93C4;
+}
+
+body.theme-blue a.page-control {
+    color: #1F93C4;
+}
+
+body.theme-blue .favorite {
+    color: #1F93C4;
+}
+
+body.theme-blue .session-everyone {
+    border-bottom-color: #1F93C4;
+}
+
+body.theme-blue #show-full-schedule {
+    color: #1F93C4;
+}
+
+

@@ -113,7 +113,7 @@ nav .logo {
 }
 
 #page-links a.active {
-  color: #CF455D;
+  color: #55565A;
 }
 
 h1 {
@@ -126,7 +126,7 @@ h1 {
 h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #CF455D;
+  color: #55565A;
   margin-top: 0;
 }
 
@@ -141,7 +141,7 @@ header a {
 
 .btn {
   display: inline-block;
-  background: #CF455D;
+  background: #55565A;
   padding: 5px 10px;
   border-radius: 3px;
   color: #fff;
@@ -150,7 +150,7 @@ header a {
 }
 
 .btn:hover {
-  background: #CF455D;
+  background: #55565A;
 }
 
 #schedule {
@@ -201,7 +201,7 @@ header a {
   text-transform: uppercase;
 }
 #schedule-controls a.active {
-  background-color: #CF455D;
+  background-color: #55565A;
 }
 
 .schedule-tab,
@@ -227,7 +227,7 @@ header a {
 .schedule-tab h3 span,
 .page-caption h3 span {
   font-family: "Open Sans", sans-serif;
-  color: #CF455D;
+  color: #55565A;
   background-color: #fff;
   padding: 0 2rem;
   font-size: 3rem;
@@ -325,7 +325,7 @@ h3.slider-control {
   cursor: pointer;
 }
 a.page-control {
-  color: #CF455D
+  color: #55565A
 }
 
 #filter-form {
@@ -355,7 +355,7 @@ a.page-control {
 }
 
 .favorite {
-  color: #CF455D;
+  color: #55565A;
   font-size: 3.5rem;
   width: 4rem;
   position: absolute;
@@ -377,8 +377,10 @@ a.page-control {
 
 .session-facilitators,
 .session-time,
-.session-category-and-location,
-.session-tags {
+.session-location,
+.session-tags,
+.session-category,
+.session-url{
   position: relative;
   padding-left: 25px;
   text-transform: capitalize;
@@ -386,8 +388,10 @@ a.page-control {
 
 .session-facilitators:before,
 .session-time:before,
-.session-category-and-location:before,
-.session-tags:before {
+.session-location:before,
+.session-tags:before,
+.session-category:before,
+.session-url:before{
   display: block;
   content: "";
   background-size: 20px auto;
@@ -407,14 +411,24 @@ a.page-control {
   top: 4px;
 }
 
-.session-category-and-location:before {
-  background-image: url(../img/icon-category.svg);
+.session-location:before {
+  background-image: url(../img/icon-location.svg);
   top: 6px;
 }
 
 .session-tags:before {
   background-image: url(../img/icon-tag.svg);
   top: 4px;
+}
+
+.session-category:before {
+  background-image: url(../img/icon-theme.svg);
+  top: 6px;
+}
+
+.session-url:before {
+  background-image: url(../img/icon-url.svg);
+  top: 6px;
 }
 
 .session-notes-url {
@@ -438,7 +452,7 @@ a.page-control {
 }
 
 .session-everyone {
-  border-bottom: 10px solid #CF455D;
+  border-bottom: 10px solid #55565A;
 }
 
 .session-ghost {
@@ -468,14 +482,23 @@ a.page-control {
 .session-time {
 
 }
-.session-category-and-location {
+
+.session-location {
+
+}
+
+.session-category {
+
+}
+
+.session-url {
 
 }
 
 #show-full-schedule {
   display: block;
   font-size: 2rem;
-  color: #CF455D;
+  color: #55565A;
   margin-bottom: 2rem;
 }
 
@@ -591,11 +614,19 @@ a.page-control {
     top: 2px;
   }
 
-  .session-category-and-location:before {
+  .session-location:before {
     top: 3px;
   }
 
   .session-tags:before {
+    top: 2px;
+  }
+
+  .session-category:before {
+    top: 2px;
+  }
+
+  .session-url:before {
     top: 2px;
   }
 }
