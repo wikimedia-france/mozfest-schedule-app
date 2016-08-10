@@ -81,7 +81,7 @@
         <% } %>
         <% if (showFacilitators && session.facilitators) { %>
         <div class="session-facilitators">
-          <%= smartypants(session.facilitators) %>
+          <%= session.facilitators %>
         </div>
         <% } %>
         <% if (session.category) { %>
@@ -114,7 +114,7 @@
       <% } %>
       <% if (showFacilitators && session.facilitators.length > 0) { %>
       <div class="session-facilitators">
-        <%= smartypants(session.facilitators) %>
+        <%= session.facilitators %>
       </div>
       <% } %>
       <% if (session.category) { %>
@@ -129,7 +129,7 @@
       <% } %>
       <div class="hidden session-description">
       <% if (session.description) { %>
-        <%= marked(session.description.replace('http://','').replace('https://','')) %>
+        <%= session.description %>
       <% } %>
       </div>
     </div>
@@ -171,13 +171,13 @@
           <% } %>
           <% if (session.link) { %>
           <div class="session-url">
-            <% if (session.link) { %><a href="<%= session.link %>" target="_blank">Lien D'Information</a><% } %>
+            <% if (session.link) { %><a href="<%= session.link %>" target="_blank">En savoir plus</a><% } %>
           </div>
           <% } %>
         </div>
         <% if (session.description) { %>
         <div class="session-description">
-          <%= marked(session.description) %>
+          <%= session.description %>
         </div>
         <% } %>
       </div>
