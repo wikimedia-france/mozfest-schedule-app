@@ -1,41 +1,41 @@
-body.theme-purple #page-links a.active {
+body[data-theme='purple'] #page-links a.active {
     color: #801D6B;
 }
 
-body.theme-purple h2 {
+body[data-theme='purple'] h2 {
     color: #801D6B;
 }
 
-body.theme-purple .btn {
+body[data-theme='purple'] .btn {
     background: #801D6B;
 }
 
-body.theme-purple .btn:hover {
+body[data-theme='purple'] .btn:hover {
     background: #801D6B;
 }
 
-body.theme-purple #schedule-controls a.active {
+body[data-theme='purple'] #schedule-controls a.active {
     background-color: #801D6B;
 }
 
-body.theme-purple .schedule-tab h3 span,
-body.theme-purple .page-caption h3 span {
+body[data-theme='purple'] .schedule-tab h3 span,
+body[data-theme='purple'] .page-caption h3 span {
     color: #801D6B;
 }
 
-body.theme-purple a.page-control {
+body[data-theme='purple'] a.page-control {
     color: #801D6B;
 }
 
-body.theme-purple .favorite {
+body[data-theme='purple'] .favorite {
     color: #801D6B;
 }
 
-body.theme-purple .session-everyone {
+body[data-theme='purple'] .session-everyone {
     border-bottom-color: #801D6B;
 }
 
-body.theme-purple #show-full-schedule {
+body[data-theme='purple'] #show-full-schedule {
     color: #801D6B;
 }
 

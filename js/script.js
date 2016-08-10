@@ -1,6 +1,7 @@
 /**
  * Created by jitrixis on 26/07/2016.
  */
+color = ["green", "blue", "red", "purple", "yellow"];
 appCache = window.applicationCache;
 cacheNotif = {
     "error":{
@@ -105,4 +106,8 @@ $( document ).ready(function () {
     if(!navigator.onLine){
         changeNotice("offline");
     }
+});
+
+$("ul li a, #page-links a").click(function(){
+    $("body").attr("data-theme", color[(color.indexOf($("body").attr("data-theme"))+1)%5])
 });
