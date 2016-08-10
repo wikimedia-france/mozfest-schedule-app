@@ -383,7 +383,7 @@ a.page-control {
 .session-url{
   position: relative;
   padding-left: 25px;
-  text-transform: capitalize;
+  /*text-transform: capitalize;*/
 }
 
 .session-facilitators:before,
