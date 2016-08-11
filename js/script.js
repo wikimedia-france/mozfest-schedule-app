@@ -87,6 +87,9 @@ function handleCacheEvent(e) {
     }else {
         changeNotice(e.type, -1);
     }
+    if(e.type == "updateready"){
+        appCache.swapCache();
+    }
 }
 
 $( document ).ready(function () {
@@ -118,4 +121,8 @@ $( document ).ready(function () {
 
 $("ul li a, #page-links a").click(function(){
     $("body").attr("data-theme", color[(color.indexOf($("body").attr("data-theme"))+1)%5])
+});
+
+$(".cache-notice").click(function(){
+    appCache.update();
 });
