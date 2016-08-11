@@ -1,41 +1,41 @@
-body.theme-red #page-links a.active {
+body[data-theme='red'] #page-links a.active {
     color: #E41B1F;
 }
 
-body.theme-red h2 {
+body[data-theme='red'] h2 {
     color: #E41B1F;
 }
 
-body.theme-red .btn {
+body[data-theme='red'] .btn {
     background: #E41B1F;
 }
 
-body.theme-red .btn:hover {
+body[data-theme='red'] .btn:hover {
     background: #E41B1F;
 }
 
-body.theme-red #schedule-controls a.active {
+body[data-theme='red'] #schedule-controls a.active {
     background-color: #E41B1F;
 }
 
-body.theme-red .schedule-tab h3 span,
-body.theme-red .page-caption h3 span {
+body[data-theme='red'] .schedule-tab h3 span,
+body[data-theme='red'] .page-caption h3 span {
     color: #E41B1F;
 }
 
-body.theme-red a.page-control {
+body[data-theme='red'] a.page-control {
     color: #E41B1F;
 }
 
-body.theme-red .favorite {
+body[data-theme='red'] .favorite {
     color: #E41B1F;
 }
 
-body.theme-red .session-everyone {
+body[data-theme='red'] .session-everyone {
     border-bottom-color: #E41B1F;
 }
 
-body.theme-red #show-full-schedule {
+body[data-theme='red'] #show-full-schedule {
     color: #E41B1F;
 }
 
