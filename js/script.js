@@ -72,7 +72,7 @@ function changeNotice(type, progress){
                 $(selector).attr("src", value)
             }else {
                 if(progress != -1){
-                    $(selector).text(value + " ( " + (progress*100) + "% )");
+                    $(selector).text(value + " ( " + Math.round(progress*100) + "% )");
                 }else {
                     $(selector).text(value);
                 }
@@ -83,7 +83,7 @@ function changeNotice(type, progress){
 
 function handleCacheEvent(e) {
     if(e.type == "progress"){
-        changeNotice(e.type, Math.round(e.loaded / e.total));
+        changeNotice(e.type, e.loaded / e.total);
     }else {
         changeNotice(e.type, -1);
     }
