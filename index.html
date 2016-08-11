@@ -156,9 +156,15 @@
           </div>
           <% } %>
           <% if (session.facilitators) { %>
+          <hr/>
+          <% } %>
+          <% if (session.facilitators) { %>
           <div class="session-facilitators">
             <% session.facilitator_array.forEach(function(facilitator, index) { %><% if (index > 0) { %>, <br><% } %><%= facilitator.name %><% if (facilitator.twitter) { %> <a href="https://twitter.com/<%= facilitator.twitter %>"><%= facilitator.twitter %></a><% } %><% if (facilitator.description.length>0) { %>, <%= facilitator.description %><% } %><% }) %>
           </div>
+          <% } %>
+          <% if (session.tags || session.category) { %>
+          <hr/>
           <% } %>
           <% if (session.category) { %>
           <div class="session-category">
@@ -171,6 +177,9 @@
               <a href="#_<%= customTagLabel %>-<%= slugify(name) %>"><%= name %></a><% }) %>
           </div>
           <% } %>
+          <% if (session.link || session.category != 'Tout public') { %>
+          <hr/>
+          <% } %>
           <% if (session.link) { %>
           <div class="session-url">
             <% if (session.link) { %><a href="<%= session.link %>" target="_blank">En savoir plus</a><% } %>
@@ -179,6 +188,12 @@
           <% if (session.category != 'Tout public') { %>
           <div class="session-etherpad">
             <% if (session.id) { %><a href="https://notes.wikimedia.fr/public_pad/WikiConvFR16_<%= session.id %>" target="_blank">Etherpad</a><% } %>
+          </div>
+          <% } %>
+          <% if (session.nextSessionID) { %>
+          <hr/>
+          <div class="session-next-session">
+            <% if (session.nextSessionID) { %>Prochaine session : <a href="#_session-<%= session.nextSessionID %>"><%= session.nextSessionTitle %></a><% } %>
           </div>
           <% } %>
         </div>
