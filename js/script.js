@@ -92,27 +92,27 @@ function handleCacheEvent(e) {
 $( document ).ready(function () {
     switch (appCache.status) {
         case appCache.UNCACHED:
-            changeNotice("error");
+            changeNotice("error", -1);
             break;
         case appCache.IDLE:
-            changeNotice("ok");
+            changeNotice("ok", -1);
             break;
         case appCache.CHECKING:
         case appCache.DOWNLOADING:
-            changeNotice("busy");
+            changeNotice("busy", -1);
             break;
         case appCache.UPDATEREADY:
-            changeNotice("warning");
+            changeNotice("warning", -1);
             break;
         case appCache.OBSOLETE:
-            changeNotice("error");
+            changeNotice("error", -1);
             break;
         default:
-            changeNotice("error");
+            changeNotice("error", -1);
             break;
     }
     if(!navigator.onLine){
-        changeNotice("offline");
+        changeNotice("offline", -1);
     }
 });
 
