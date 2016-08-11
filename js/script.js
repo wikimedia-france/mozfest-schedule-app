@@ -83,7 +83,7 @@ function changeNotice(type, progress){
 
 function handleCacheEvent(e) {
     if(e.type == "progress"){
-        changeNotice(e.type, (e.loaded / e.total));
+        changeNotice(e.type, Math.round(e.loaded / e.total));
     }else {
         changeNotice(e.type, -1);
     }
