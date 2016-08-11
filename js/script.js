@@ -64,21 +64,29 @@ window.addEventListener("offline", handleCacheEvent, false);
 
 window.addEventListener("online", handleCacheEvent, false);
 
-function changeNotice(type){
+function changeNotice(type, progress){
     if(cacheNotif.hasOwnProperty(type)){
         notif = cacheNotif[type];
         $.each(notif, function(selector, value) {
             if($(selector).prop("tagName") == "IMG"){
                 $(selector).attr("src", value)
             }else {
-                $(selector).text(value);
+                if(progress != -1){
+                    $(selector).text(value + " ( " + (progress*100) + "% )");
+                }else {
+                    $(selector).text(value);
+                }
             }
         });
     }
 }
 
 function handleCacheEvent(e) {
-    changeNotice(e.type);
+    if(e.type == "progress"){
+        changeNotice(e.type, (e.loaded / e.total));
+    }else {
+        changeNotice(e.type, -1);
+    }
 }
 
 $( document ).ready(function () {

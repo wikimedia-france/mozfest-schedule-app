@@ -380,7 +380,8 @@ a.page-control {
 .session-location,
 .session-tags,
 .session-category,
-.session-url{
+.session-url,
+.session-etherpad{
   position: relative;
   padding-left: 25px;
   /*text-transform: capitalize;*/
@@ -391,7 +392,8 @@ a.page-control {
 .session-location:before,
 .session-tags:before,
 .session-category:before,
-.session-url:before{
+.session-url:before,
+.session-etherpad:before{
   display: block;
   content: "";
   background-size: 20px auto;
@@ -428,6 +430,11 @@ a.page-control {
 
 .session-url:before {
   background-image: url(../img/icon-url.svg);
+  top: 6px;
+}
+
+.session-etherpad:before {
+  background-image: url(../img/icon-etherpad.svg);
   top: 6px;
 }
 
@@ -492,6 +499,10 @@ a.page-control {
 }
 
 .session-url {
+
+}
+
+.session-etherpad {
 
 }
 
@@ -627,6 +638,10 @@ a.page-control {
   }
 
   .session-url:before {
+    top: 2px;
+  }
+
+  .session-etherpad:before {
     top: 2px;
   }
 }

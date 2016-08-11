@@ -174,6 +174,11 @@
             <% if (session.link) { %><a href="<%= session.link %>" target="_blank">En savoir plus</a><% } %>
           </div>
           <% } %>
+          <% if (session.category != 'Tout public') { %>
+          <div class="session-etherpad">
+            <% if (session.id) { %><a href="https://notes.wikimedia.fr/public_pad/WikiConvFR16_<%= session.id %>" target="_blank">Etherpad</a><% } %>
+          </div>
+          <% } %>
         </div>
         <% if (session.description) { %>
         <div class="session-description">

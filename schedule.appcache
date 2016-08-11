@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# revision - 20160810183038
+# revision - 2016-08-11+09:54:00
 .
 index.html
 sessions.json
@@ -43,6 +43,7 @@ vendor/schedule-app-core/img/icon-cache-error.svg
 vendor/schedule-app-core/img/icon-cache-ok.svg
 vendor/schedule-app-core/img/icon-cache-warning.svg
 vendor/schedule-app-core/img/icon-clock.svg
+vendor/schedule-app-core/img/icon-etherpad.svg
 vendor/schedule-app-core/img/icon-facilitator.svg
 vendor/schedule-app-core/img/icon-heart.svg
 vendor/schedule-app-core/img/icon-heart-filled.svg
