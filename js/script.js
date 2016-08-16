@@ -82,40 +82,45 @@ function changeNotice(type, progress){
 }
 
 function handleCacheEvent(e) {
-    if(e.type == "progress"){
-        changeNotice(e.type, e.loaded / e.total);
+    if(!navigator.onLine){
+        changeNotice("offline", -1);
     }else {
-        changeNotice(e.type, -1);
-    }
-    if(e.type == "updateready"){
-        appCache.swapCache();
+        if (e.type == "progress") {
+            changeNotice(e.type, e.loaded / e.total);
+        } else {
+            changeNotice(e.type, -1);
+        }
+        if (e.type == "updateready") {
+            appCache.swapCache();
+        }
     }
 }
 
 $( document ).ready(function () {
-    switch (appCache.status) {
-        case appCache.UNCACHED:
-            changeNotice("error", -1);
-            break;
-        case appCache.IDLE:
-            changeNotice("ok", -1);
-            break;
-        case appCache.CHECKING:
-        case appCache.DOWNLOADING:
-            changeNotice("busy", -1);
-            break;
-        case appCache.UPDATEREADY:
-            changeNotice("warning", -1);
-            break;
-        case appCache.OBSOLETE:
-            changeNotice("error", -1);
-            break;
-        default:
-            changeNotice("error", -1);
-            break;
-    }
     if(!navigator.onLine){
         changeNotice("offline", -1);
+    }else{
+        switch (appCache.status) {
+            case appCache.UNCACHED:
+                changeNotice("error", -1);
+                break;
+            case appCache.IDLE:
+                changeNotice("ok", -1);
+                break;
+            case appCache.CHECKING:
+            case appCache.DOWNLOADING:
+                changeNotice("busy", -1);
+                break;
+            case appCache.UPDATEREADY:
+                changeNotice("warning", -1);
+                break;
+            case appCache.OBSOLETE:
+                changeNotice("error", -1);
+                break;
+            default:
+                changeNotice("error", -1);
+                break;
+        }
     }
 });
 
@@ -124,5 +129,7 @@ $("ul li a, #page-links a").click(function(){
 });
 
 $(".cache-notice").click(function(){
-    appCache.update();
+    if(navigator.onLine){
+        appCache.update();
+    }
 });
