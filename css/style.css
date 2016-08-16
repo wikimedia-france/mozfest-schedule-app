@@ -53,8 +53,14 @@ a#code-conduite {
 }
 
 @media only screen and (max-width: 767px) {
-    a#code-conduite {
+    #page-links a#code-conduite {
         border-left: 1px solid #55565A;
         padding-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #page-links {
+        margin-top: 10px;
     }
 }
