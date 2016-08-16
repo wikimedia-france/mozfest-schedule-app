@@ -96,6 +96,11 @@
           <%= session.tags %>
         </div>
         <% } %>
+        <% if (session.atelier) { %>
+        <div class="session-pc">
+          <span class="fa fa-laptop"></span> Ordinateur recommandé
+        </div>
+        <% } %>
       </div>
     </div>
     </script>
@@ -127,6 +132,11 @@
        <% if (session.tags) { %>
       <div class="session-tags">
         <%= session.tags %>
+      </div>
+      <% } %>
+      <% if (session.atelier) { %>
+      <div class="session-pc">
+        <span class="fa fa-laptop"></span> Ordinateur recommandé
       </div>
       <% } %>
       <div class="hidden session-description">
@@ -175,6 +185,11 @@
           <div class="session-tags">
             <% session.tagArray.forEach(function(name, index) { %><% if (index > 0) { %>, <% } %>
               <a href="#_<%= customTagLabel %>-<%= slugify(name) %>"><%= name %></a><% }) %>
+          </div>
+          <% } %>
+          <% if (session.atelier) { %>
+          <div class="session-pc">
+            <span class="fa fa-laptop"></span> Ordinateur recommandé
           </div>
           <% } %>
           <% if (session.link || session.category != 'Tout public') { %>
