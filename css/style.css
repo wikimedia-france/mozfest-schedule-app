@@ -46,3 +46,15 @@
     border-color: white;
     border-style: solid;
 }
+
+a#code-conduite {
+    border-left: 2px solid #55565A;
+    padding-left: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+    a#code-conduite {
+        border-left: 1px solid #55565A;
+        padding-left: 10px;
+    }
+}
