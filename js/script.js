@@ -3,6 +3,7 @@
  */
 color = ["green", "blue", "red", "purple", "yellow"];
 appCache = window.applicationCache;
+lastNotif = "";
 cacheNotif = {
     "not-supported":{
         ".cache-notice .cache-icon": "./vendor/schedule-app-core/img/icon-cache-error.svg",
@@ -83,6 +84,7 @@ function changeNotice(type, progress){
             }
         });
     }
+    lastNotif = type;
 }
 
 function handleCacheEvent(e) {
@@ -140,7 +142,7 @@ $("ul li a, #page-links a").click(function(){
 
 $(".cache-notice").click(function(){
     if(navigator.onLine){
-        if(appCache.status == appCache.UPDATEREADY){
+        if(appCache.status == appCache.UPDATEREADY || lastNotif == "updateready" || lastNotif == "warning"){
             location.reload();
         }else {
             appCache.update();
