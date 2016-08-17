@@ -11,7 +11,7 @@ cacheNotif = {
     },
     "error":{
         ".cache-notice .cache-icon": "./vendor/schedule-app-core/img/icon-cache-error.svg",
-        ".cache-notice .cache-text": "Une erreur est servenue. Le fonctionnalité hors-ligne n'est pas disponible pour l'instant."
+        ".cache-notice .cache-text": "Une erreur est servenue. La fonctionnalité hors-ligne peux ne pas fonctionner correctement."
     },
     "busy":{
         ".cache-notice .cache-icon": "./vendor/schedule-app-core/img/icon-cache-busy.svg",
