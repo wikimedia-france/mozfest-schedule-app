@@ -4,9 +4,13 @@
 color = ["green", "blue", "red", "purple", "yellow"];
 appCache = window.applicationCache;
 cacheNotif = {
-    "error":{
+    "not-supported":{
         ".cache-notice .cache-icon": "./vendor/schedule-app-core/img/icon-cache-error.svg",
         ".cache-notice .cache-text": "Votre navigateur ne supporte pas la fonctionnalité hors-ligne."
+    },
+    "error":{
+        ".cache-notice .cache-icon": "./vendor/schedule-app-core/img/icon-cache-error.svg",
+        ".cache-notice .cache-text": "Une erreur est servenue. Le fonctionnalité hors-ligne n'est pas disponible pour l'instant."
     },
     "busy":{
         ".cache-notice .cache-icon": "./vendor/schedule-app-core/img/icon-cache-busy.svg",
@@ -97,30 +101,36 @@ function handleCacheEvent(e) {
 }
 
 $( document ).ready(function () {
-    if(!navigator.onLine){
-        changeNotice("offline", -1);
-    }else{
-        switch (appCache.status) {
-            case appCache.UNCACHED:
-                changeNotice("error", -1);
-                break;
-            case appCache.IDLE:
-                changeNotice("ok", -1);
-                break;
-            case appCache.CHECKING:
-            case appCache.DOWNLOADING:
-                changeNotice("busy", -1);
-                break;
-            case appCache.UPDATEREADY:
-                changeNotice("warning", -1);
-                break;
-            case appCache.OBSOLETE:
-                changeNotice("error", -1);
-                break;
-            default:
-                changeNotice("error", -1);
-                break;
+    try {
+        if(!navigator.onLine){
+            changeNotice("offline", -1);
+        }else{
+            switch (appCache.status) {
+                case appCache.UNCACHED:
+                    changeNotice("error", -1);
+                    break;
+                case appCache.IDLE:
+                    changeNotice("ok", -1);
+                    break;
+                case appCache.CHECKING:
+                case appCache.DOWNLOADING:
+                    changeNotice("busy", -1);
+                    break;
+                case appCache.UPDATEREADY:
+                    changeNotice("warning", -1);
+                    break;
+                case appCache.OBSOLETE:
+                    changeNotice("error", -1);
+                    break;
+                default:
+                    changeNotice("not-supported", -1);
+                    break;
+            }
         }
+    }
+    catch (e) {
+        changeNotice("not-supported", -1);
+        throw e;
     }
 });
 
@@ -130,6 +140,10 @@ $("ul li a, #page-links a").click(function(){
 
 $(".cache-notice").click(function(){
     if(navigator.onLine){
-        appCache.update();
+        if(appCache.status == appCache.UPDATEREADY){
+            location.reload();
+        }else {
+            appCache.update();
+        }
     }
 });
