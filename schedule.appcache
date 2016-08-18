@@ -62,6 +62,3 @@ vendor/schedule-app-core/js/marked.min.js
 vendor/schedule-app-core/js/modernizr.js
 vendor/schedule-app-core/js/schedule.js
 vendor/schedule-app-core/js/underscore-min.js
-
-NETWORK:
-*
