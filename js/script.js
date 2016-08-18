@@ -11,7 +11,7 @@ cacheNotif = {
     },
     "error":{
         ".cache-notice .cache-icon": "./vendor/schedule-app-core/img/icon-cache-error.svg",
-        ".cache-notice .cache-text": "Une erreur est servenue. La fonctionnalité hors-ligne peux ne pas fonctionner correctement."
+        ".cache-notice .cache-text": "Une erreur est servenue. La fonctionnalité hors-ligne peut ne pas fonctionner correctement."
     },
     "busy":{
         ".cache-notice .cache-icon": "./vendor/schedule-app-core/img/icon-cache-busy.svg",
@@ -19,7 +19,7 @@ cacheNotif = {
     },
     "warning":{
         ".cache-notice .cache-icon": "./vendor/schedule-app-core/img/icon-cache-warning.svg",
-        ".cache-notice .cache-text": "Une mise à jour est disponible. Recharger la page."
+        ".cache-notice .cache-text": "Une mise à jour est disponible. Rechargez la page."
     },
     "ok":{
         ".cache-notice .cache-icon": "./vendor/schedule-app-core/img/icon-cache-ok.svg",
