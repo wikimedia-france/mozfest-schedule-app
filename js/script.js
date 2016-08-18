@@ -102,6 +102,10 @@ function handleCacheEvent(e) {
     }
 }
 
+function toggleMapSize(e){
+    $(e).toggleClass("full");
+}
+
 $( document ).ready(function () {
     try {
         if(!navigator.onLine){

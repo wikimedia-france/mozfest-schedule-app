@@ -156,7 +156,7 @@
         </div>
         <div class="meta">
           <% if (session.location == "Bastille" || session.location == "Denfert-Rochereau" || session.location == "Nation" || session.location == "République" || session.location == "Sorbonne") { %>
-          <img class="session-map" src="./img/plan/<%= session.location %>.svg"/>
+          <img class="session-map" src="./img/plan/<%= session.location %>.svg" onclick="toggleMapSize(this);"/>
           <% } %>
           <% if (session.start) { %>
           <div class="session-time">

@@ -57,6 +57,17 @@ a#code-conduite {
     float: right;
 }
 
+.session-time,
+.session-location{
+    overflow: hidden;
+}
+
+.session-map.full{
+    width: 100%;
+    height: 100%;
+    float: none;
+}
+
 @media only screen and (max-width: 767px) {
     #page-links a#code-conduite {
         border-left: 1px solid #55565A;
