@@ -155,6 +155,9 @@
           <h2><%= smartypants(session.title) %></h2>
         </div>
         <div class="meta">
+          <% if (session.location == "Bastille" || session.location == "Denfert-Rochereau" || session.location == "Nation" || session.location == "République" || session.location == "Sorbonne") { %>
+          <img class="session-map" src="./img/plan/<%= session.location %>.svg"/>
+          <% } %>
           <% if (session.start) { %>
           <div class="session-time">
             <% if (session.day) { %><%= session.day %>, <% } %><%= session.start %><% if (session.duration) { %> <em><%= session.duration %></em><% } %>

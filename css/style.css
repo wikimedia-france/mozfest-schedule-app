@@ -52,6 +52,11 @@ a#code-conduite {
     padding-left: 15px;
 }
 
+.session-map{
+    height: 2em;
+    float: right;
+}
+
 @media only screen and (max-width: 767px) {
     #page-links a#code-conduite {
         border-left: 1px solid #55565A;

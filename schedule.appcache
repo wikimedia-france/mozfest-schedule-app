@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# revision - Thu 18 Aug 10:04:00 CEST 2016
+# revision - Thu 18 Aug 11:28:00 CEST 2016
 .
 index.html
 sessions.json
@@ -15,6 +15,11 @@ img/logo-square-wikiconvention-2016-180px.png
 img/logo-square-wikiconvention-2016-32px.png
 img/logo-square-wikiconvention-2016.svg
 img/logo-wikiconvention-2016.svg
+img/plan/Bastille.svg
+img/plan/Denfert-Rochereau.svg
+img/plan/Nation.svg
+img/plan/République.svg
+img/plan/Sorbonne.svg
 js/script.js
 vendor/font-awesome/css/font-awesome.min.css
 vendor/font-awesome/fonts/FontAwesome.otf
@@ -57,3 +62,6 @@ vendor/schedule-app-core/js/marked.min.js
 vendor/schedule-app-core/js/modernizr.js
 vendor/schedule-app-core/js/schedule.js
 vendor/schedule-app-core/js/underscore-min.js
+
+NETWORK:
+*
