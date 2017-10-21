@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# revision - Fri Oct 20 14:49:02 CEST 2017
+# revision - Sat Oct 21 09:08:01 CEST 2017
 .
 index.html
 sessions.json
@@ -11,7 +11,6 @@ css/schedule-green.css
 css/schedule-purple.css
 css/schedule-red.css
 css/schedule-yellow.css
-img/logo-square-wikiconvention-2017-180px.png
 img/logo-square-wikiconvention-2017.svg
 img/logo-wikiconvention-2017.svg
 img/plan/Bastille.svg
