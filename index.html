@@ -203,11 +203,6 @@
             <% if (session.link) { %><a href="<%= session.link %>" target="_blank">En savoir plus</a><% } %>
           </div>
           <% } %>
-          <% if (session.category != 'Tout public') { %>
-          <div class="session-etherpad">
-            <% if (session.id) { %><a href="https://notes.wikimedia.fr/p/WikiConvFR17_<%= session.id %>" target="_blank">Etherpad</a><% } %>
-          </div>
-          <% } %>
           <% if (session.nextSessionID) { %>
           <hr/>
           <div class="session-next-session">
@@ -218,6 +213,11 @@
         <% if (session.description) { %>
         <div class="session-description">
           <%= session.description %>
+        </div>
+        <% } %>
+        <% if (session.category != 'Tout public' && session.id) { %>
+        <div class="session-footer">
+          <a href="https://notes.wikimedia.fr/p/WikiConvFR18_<%= session.id %>" target="_blank" class="btn">Notes</a>
         </div>
         <% } %>
       </div>
