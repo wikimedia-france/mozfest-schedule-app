@@ -37,6 +37,15 @@
     padding-top: 1em;
 }
 
+.session-footer {
+    padding-top: 1.5em;
+    text-align: center;
+}
+
+.session-footer .btn {
+    padding: 0.5em 2em;
+}
+
 .session-next-session{
     font-size: small;
     text-align: center;
